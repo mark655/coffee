@@ -1,0 +1,222 @@
+.register{
+  .van-nav-bar{
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee, #fbc2eb);
+  }
+  .logo{
+    margin-top: 40px;
+  }
+  figure {
+    --skinH: 30;
+    --skinS: 100%;
+    --skinL: 87%;
+    --hair: rgb(180,70,60);
+    
+    background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%);
+     
+    border-radius: 80%;
+    height: 0;
+    margin: auto auto;
+    margin-bottom: 0rem;
+    order: 1;
+    padding-top: 60%;
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+  }
+  
+  figure div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  figure .skin {
+    background: hsl(var(--skinH), var(--skinS), var(--skinL));
+    box-shadow: inset 0 0 3rem hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.95));
+  }
+  
+  figure .head {
+    top: 40%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    border-radius: 100%;
+    box-shadow: 0 -0.175rem 0 0.125rem var(--hair);
+  }
+  
+  .figure  .ears {
+    top: 47%;
+    left: 50%;
+    white-space: nowrap;
+  }
+  
+  .figure .ears,
+  figure .ears {
+    content: "";
+    background: hsl(var(--skinH), var(--skinS), var(--skinL));
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin: 0 2.1rem;
+  }
+  
+  .figure .head .eyes {
+    top: 60%;
+    left: 50%;
+    white-space: nowrap;
+  }
+  
+  @-webkit-keyframes blink {
+    0%, 90%, 100% {
+      height: 10px;
+    }
+    95% {
+      height: 0;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 90%, 100% {
+      height: 10px;
+    }
+    95% {
+      height: 0px;
+    }
+  }
+  
+  .figure .head .eyes,
+  figure .head .eyes {
+    content: "";
+    background: var(--borderDarker);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 0.5rem;
+    -webkit-animation: blink 5s infinite;
+    animation: blink 5s infinite;
+    transition: all 0.15s;
+  }
+  
+  .input[name="show-password"]:checked ~ figure .head .eyes::before,
+  input[name="show-password"]:checked ~ figure .head .eyes::after {
+    height: 0.125rem;
+    animation: none;
+  }
+  
+  .figure .head .mouth {
+    border: 0.125rem solid transparent;
+    border-bottom: 0.125rem solid var(--borderDarker);
+    width: 25%;
+    border-radius: 50%;
+    transition: all 0.5s
+  }
+  
+  .form:invalid figure .head .mouth {
+    top: 75%;
+    left: 50%;
+    height: 10%;
+  }
+  
+  .form:valid figure .head .mouth {
+    top: 60%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+  }
+  
+  figure .hair {
+    top: 40%;
+    left: 50%;
+    width: 66.66%;
+    height: 66.66%;
+    border-radius: 100%;  
+    overflow: hidden;
+  }
+  
+  figure .hair::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--hair);
+    border-radius: 50%;
+    top: -60%;
+    left: -50%;
+    box-shadow: 4rem 0 var(--hair);
+  }
+  
+  .figure .neck {
+    width: 10%;
+    height: 40%;
+    top: 62%;
+    left: 50%;
+    background: hsl(var(--skinH), var(--skinS), calc(var(--skinL) * 0.94));
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 0.25rem var(--border);
+  }
+  
+  .figure .person-body {
+    width: 60%;
+    height: 100%;
+    border-radius: 50%;
+    background: red;
+    left: 50%;
+    top: 126%;
+    background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+  }
+  
+  .figure .shirt-1,
+  figure .shirt-2 {
+    width: 12%;
+    height: 7%;
+    background: hsl(var(--bgColorH), var(--bgColorS), var(--bgColorL));
+    top: 76%;
+    left: 36.5%;
+    transform: skew(-10deg) rotate(15deg)
+  }
+  
+  .figure .shirt-2 {
+    left: 52.5%;
+    transform: skew(10deg) rotate(-15deg)
+  }
+  
+  .register-btn{
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+}
+
+.van-cell {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  /* placeholder变更为大写字体 */
+  text-transform: uppercase;
+  /* 边框效果 */
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #fbc2eb;
+  font-weight: bold;
+  color: #acb7c9;
+   /* box-shadow: 0px 0px 5px #fbc2eb;
+  border-bottom: 1px solid #fff; */
+  animation: bBottom 2s infinite ;
+}
+.van-button{
+      height: 40px;
+      line-height: 40px;
+      /* 字体 */
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      letter-spacing: 10px;
+      text-align: center;
+      /* 鼠标样式 */
+      cursor: pointer;
+      /* 边框、背景 */
+      border-radius: 10px;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee, #fbc2eb);
+      background-size: 200%;
+}
